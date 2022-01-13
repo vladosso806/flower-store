@@ -1,0 +1,17 @@
+<h2 class="text-item-center">Флорариумы</h2>
+
+<div *ngIf="isLoaded" class="bouquets-container">
+  <div class="d-md-flex flex-md-wrap flex-row justify-content-between">
+    <div *ngFor="let product of products" class="product-item">
+      <a class="product-img-link" [routerLink]="product.id + ''">
+        <img class="product-image-small" [src]="product.imageSrc" [alt]="product.title"/>
+        <span class="more">
+        <span>Узнать больше</span>
+        </span>
+      </a>
+      <p>{{product.title}}</p>
+      <p *ngIf="!product.stockAvailability">Нет в наличии</p>
+      <p *ngIf="product.stockAvailability">{{product.price}} BYN</p>
+    </div>
+  </div>
+</div>

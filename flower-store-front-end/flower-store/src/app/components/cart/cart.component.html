@@ -1,0 +1,31 @@
+<h2 class="text-item-center">Корзина</h2>
+
+<div *ngIf="isLoaded" class="bouquets-container">
+  <div class="d-md-flex flex-md-wrap flex-row justify-content-between">
+    <div *ngFor="let cartItem of products" class="product-item">
+      <a class="product-img-link" [routerLink]="cartItem.product.id + ''">
+        <img class="product-image-small" [src]="cartItem.product.imageSrc" [alt]="cartItem.product.title"/>
+        <span class="more">
+        <span>Узнать больше</span>
+        </span>
+      </a>
+      <p>{{cartItem.product.title}}</p>
+      <p>Количество: {{cartItem.quantity}}</p>
+      <p>Стоимость: {{cartItem.fullPrice.toFixed(2)}} BYN</p>
+    </div>
+  </div>
+  <button (click)="clearCart()" class="text-item-center" style="width: 100%;
+   border-radius: 15px;
+    border: 0;
+     background-color: rgba(255,27,0,0.64);
+  color: white;
+  padding: 10px;">Оформить заказ
+  </button>
+  <button class="text-item-center" style="width: 100%;
+   border-radius: 15px;
+    border: 0;
+     background-color: #797375;
+  color: white;
+  padding: 10px;">Oчистить корзину
+  </button>
+</div>

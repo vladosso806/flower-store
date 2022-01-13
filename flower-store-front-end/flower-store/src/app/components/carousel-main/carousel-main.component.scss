@@ -1,0 +1,36 @@
+.carousel-inner img {
+  width: 100%;
+  height: 30vw;
+  object-fit: cover;
+  object-position: 50% 25%;
+  padding: 2px;
+  transition: opacity .3s;
+}
+
+.carousel {
+  margin: 20px 100px;
+  height: 30vw;
+}
+
+.carousel-caption h3, .carousel-caption p {
+  text-shadow: 2px 2px 3px black;
+}
+
+.carousel-caption h3 {
+  font-size: 1.5em;
+}
+
+.carousel-caption {
+  background-color: rgba(114,255,0,0.5);
+  border-radius: 50px;
+  padding: 10px 30px;
+}
+
+a.carousel-control-next, a.carousel-control-prev {
+  visibility: hidden;
+  transition: opacity 0.5s linear;
+}
+
+div#main-carousel:hover a.carousel-control-next, div#main-carousel:hover  a.carousel-control-prev {
+  visibility: visible;
+}

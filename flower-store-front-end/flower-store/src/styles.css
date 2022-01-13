@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+
+.main-background {
+  background-color: whitesmoke;
+}
+
+.text-item-center,
+.mat-typography h2.text-item-center,
+div .text-item-center {
+  margin: 10px auto 0 auto;
+  width: fit-content;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

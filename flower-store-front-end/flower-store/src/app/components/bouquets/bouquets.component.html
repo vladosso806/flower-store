@@ -1,0 +1,18 @@
+<h2 class="text-item-center">Букеты</h2>
+
+<div *ngIf="isLoaded" class="bouquets-container">
+  <div class="d-md-flex flex-md-wrap flex-row justify-content-between">
+    <div *ngFor="let bouquetModel of bouquetsModels" class="product-item">
+      <a class="product-img-link" [routerLink]="bouquetModel.id + ''">
+        <img class="product-image-small" [src]="bouquetModel.imageSrc" [alt]="bouquetModel.title"/>
+        <span class="more">
+        <span>Узнать больше</span>
+        </span>
+      </a>
+      <p>{{bouquetModel.title}}</p>
+      <p *ngIf="!bouquetModel.stockAvailability">Нет в наличии</p>
+      <p *ngIf="bouquetModel.stockAvailability">{{bouquetModel.price}} BYN</p>
+      <button *ngIf="bouquetModel.stockAvailability" (click)="addToCart(bouquetModel.id)">Добавить в корзину</button>
+    </div>
+  </div>
+</div>

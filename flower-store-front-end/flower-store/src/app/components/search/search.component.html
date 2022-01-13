@@ -1,0 +1,20 @@
+<div style="padding-left: 45%;">
+  <input [formControl]="searchInput" class="input-search" type="text" placeholder="Поиск по сайту...">
+  <button class="btn-search" (click)="search()"><i class="material-icons icon-search">search</i></button>
+</div>
+<div *ngIf="isLoaded" class="bouquets-container">
+  <h2 class="text-item-center">Результаты поиска</h2>
+  <div class="d-md-flex flex-md-wrap flex-row justify-content-between">
+    <div *ngFor="let product of products" class="product-item">
+      <a class="product-img-link" [routerLink]="product.id + ''">
+        <img class="product-image-small" [src]="product.imageSrc" [alt]="product.title"/>
+        <span class="more">
+        <span>Узнать больше</span>
+        </span>
+      </a>
+      <p>{{product.title}}</p>
+      <p *ngIf="!product.stockAvailability">Нет в наличии</p>
+      <p *ngIf="product.stockAvailability">{{product.price}} BYN</p>
+    </div>
+  </div>
+</div>

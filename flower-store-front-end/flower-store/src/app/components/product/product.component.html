@@ -1,0 +1,19 @@
+<div class="product-general-container" *ngIf="isLoaded">
+  <div class="d-md-flex flex-row">
+    <img class="product-img-large" [src]="product.imageSrc" [alt]="product.title"/>
+    <div class="col-md-6 d-md-flex flex-column">
+      <h1 class="text-item-center">{{product.title}}</h1>
+      <div *ngIf="product.stockAvailability">
+        {{product.price}} BYN
+        <button mat-stroked-button color="primary">Купить</button>
+      </div>
+      <div *ngIf="!product.stockAvailability">
+        Нет в наличии
+      </div>
+      <div>
+        <span>{{product.description}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

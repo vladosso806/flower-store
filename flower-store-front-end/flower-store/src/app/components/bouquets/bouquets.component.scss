@@ -1,0 +1,50 @@
+.product-item {
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+  border: 1px solid rgba(55,54,57,0.45);
+  padding: 2px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-image-small {
+  width: 100%;
+}
+
+.bouquets-container {
+  padding: 0 20%;
+}
+
+.product-item:hover .more {
+  top: 0;
+}
+
+.product-item .more {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: top 0.2s ease-in-out;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  color: #222;
+  padding-top: 55%;
+}
+
+.product-img-link {
+  display: block;
+  margin-bottom: 15px;
+  border: 1px solid #f6f6f6;
+  position: relative;
+  overflow: hidden;
+}
